@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country</title>
+    <link rel="stylesheet" href="templates/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="nav">
+            <a class="link" href="/disease-type">Disease types</a>
+            <a class="link" href="/country">Countries</a>
+            <a class="link" id="active" href="/disease">Diseases</a>
+            <a class="link" href="/discover">Discovers</a>
+            <a class="link" href="/users">Users</a>
+            <a class="link" href="/public-servant">Public servants</a>
+            <a class="link" href="/doctor">Doctors</a>
+            <a class="link" href="/specialize">Specializes</a>
+            <a class="link" href="/record">Records</a>
+    </div>
+    <div class="info">
+        <div class="crud">
+            <form action="/add-disease" method="post">
+                <label>
+                    Add a new disease code
+                    <input type="text" placeholder="Disease code" name="code" required>
+                </label>
+                <label>
+                    Pathogen
+                    <input type="text" placeholder="Pathogen" name="pathogen" required>
+                </label>
+                <label>
+                    Disease type
+                    <input type="number" placeholder="Disease ID" name="id" required>
+                </label>
+                <label>
+                    Disease name
+                    <input type="text" placeholder="Disease name" name="name" required>
+                </label>
+                <input type="submit" value="Add">
+                <p>{{ add }}</p>
+            </form>
+            <form action="/delete-disease" method="post">
+                <label>
+                    Delete the disease
+                    <input type="text" placeholder="Disease code" name="code" required>
+                </label>
+                <input type="submit" value="Delete">
+                <p>{{delete}}</p>
+            </form>
+            <form action="/get-disease" method="get">
+                <label>
+                    Find the disease
+                    <input type="text" placeholder="Disease code" name="code" required>
+                </label>
+                <input type="submit" value="Find">
+                <p>{{get}}</p>
+            </form>
+            <form action="/update-disease" method="post">
+                <label>
+                    Update the disease
+                    <input type="text" placeholder="Disease code" name="code" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Disease name" name="name" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Pathogen" name="pathogen" required>
+                </label>
+                <label>
+                    <input type="number" placeholder="Disease type" name="id" required>
+                </label>
+                <input type="submit" value="Update">
+                <p>{{update}}</p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

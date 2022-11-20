@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="templates/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="nav">
+            <a class="link" id="active" href="/disease-type">Disease types</a>
+            <a class="link" href="/country">Countries</a>
+            <a class="link" href="/disease">Diseases</a>
+            <a class="link" href="/discover">Discovers</a>
+            <a class="link" href="/users">Users</a>
+            <a class="link" href="/public-servant">Public servants</a>
+            <a class="link" href="/doctor">Doctors</a>
+            <a class="link" href="/specialize">Specializes</a>
+            <a class="link" href="/record">Records</a>
+    </div>
+    <div class="info">
+        <div class="crud">
+            <form action="/add-diseasetype" method="post">
+                <label>
+                    Add a new disease type
+                    <input type="text" placeholder="Disease type" name="name" required>
+                </label>
+                <input type="submit" value="Add">
+                <p>{{ add }}</p>
+            </form>
+            <form action="/delete-diseasetype" method="post">
+                <label>
+                    Delete the disease type
+                    <input type="text" placeholder="Disease type" name="name" required>
+                </label>
+                <input type="submit" value="Delete">
+                <p>{{delete}}</p>
+            </form>
+            <form action="/get-diseasetype" method="get">
+                <label>
+                    Find the disease type
+                    <input type="text" placeholder="Disease type" name="name" required>
+                </label>
+                <input type="submit" value="Find">
+                <p>{{get}}</p>
+            </form>
+            <form action="/update-diseasetype" method="post">
+                <label>
+                    Update the disease type by ID
+                    <input type="number" placeholder="Disease ID" name="id" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Disease type" name="name" required>
+                </label>
+                <input type="submit" value="Update">
+                <p>{{update}}</p>
+            </form>
+            <form action="/get-diseasetypebyid" method="get">
+                <label>
+                    Find the disease type
+                    <input type="number" placeholder="Disease type" name="id" required>
+                </label>
+                <input type="submit" value="Find">
+                <p>{{id}}</p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

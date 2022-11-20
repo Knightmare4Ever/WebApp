@@ -1,0 +1,51 @@
+.nav{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 730px;
+    background: #6e81ff;
+}
+.link{
+    transition-duration: 0.2s;
+    font-size: 34px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    height: 70px;
+}
+.link:hover{
+    transition-duration: 0.2s;
+    background: purple;
+}
+.content{
+    width: 100%;
+    display: flex;
+}
+#active{
+    background: purple;
+}
+
+.info{
+    width: 80%;
+    display: flex;
+    font-size: 34px;
+}
+input{
+    font-size: 24px;
+}
+.title{
+    text-align: center;
+}
+.crud{
+    width: 100%;
+    background: #f7fffc;
+    height: 730px;
+}
+.crud form{
+    margin-left: 2%;
+}
+p{
+    color: red;
+    text-decoration: underline;
+    font-size: 18px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discover</title>
+    <link rel="stylesheet" href="templates/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="nav">
+            <a class="link" href="/disease-type">Disease types</a>
+            <a class="link" href="/country">Countries</a>
+            <a class="link" href="/disease">Diseases</a>
+            <a class="link" id="active" href="/discover">Discovers</a>
+            <a class="link" href="/users">Users</a>
+            <a class="link" href="/public-servant">Public servants</a>
+            <a class="link" href="/doctor">Doctors</a>
+            <a class="link" href="/specialize">Specializes</a>
+            <a class="link" href="/record">Records</a>
+    </div>
+    <div class="info">
+        <div class="crud">
+            <form action="/add-discover" method="post">
+                <label>
+                    Add discover
+                    <input type="text" placeholder="Country name" name="country" required>
+                </label>
+                <label>
+                    Disease code
+                    <input type="text" placeholder="Disease code" name="code" required>
+                </label>
+                <label>
+                    Discover date
+                    <input type="date" placeholder="Date" name="date" required>
+                </label>
+                <input type="submit" value="Add">
+                <p>{{ add }}</p>
+            </form>
+            <form action="/delete-discover" method="post">
+                <label>
+                    Delete discover
+                    <input type="text" placeholder="Country name" name="country" required>
+                </label>
+                <label>
+                    Disease code
+                    <input type="text" placeholder="Disease code" name="code" required>
+                </label>
+                <input type="submit" value="Delete">
+                <p>{{delete}}</p>
+            </form>
+            <form action="/get-discover" method="get">
+                <label>
+                    Find the Discover date
+                    <input type="text" placeholder="Country name" name="country" required>
+                </label>
+                <label>
+                    Disease code
+                    <input type="text" placeholder="Disease code" name="code" required>
+                </label>
+                <input type="submit" value="Find">
+                <p>{{get}}</p>
+            </form>
+            <form action="/update-discover" method="post">
+                <label>
+                    Update the Discover date
+                    <input type="text" placeholder="Country name" name="country" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Disease code" name="code" required>
+                </label>
+                <label>
+                    <input type="date" placeholder="Discover date" name="date" required>
+                </label>
+                <input type="submit" value="Update">
+                <p>{{update}}</p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

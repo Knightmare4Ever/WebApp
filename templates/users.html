@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="templates/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="nav">
+            <a class="link" href="/disease-type">Disease types</a>
+            <a class="link" href="/country">Countries</a>
+            <a class="link" href="/disease">Diseases</a>
+            <a class="link" href="/discover">Discovers</a>
+            <a class="link" id="active" href="/users">Users</a>
+            <a class="link" href="/public-servant">Public servants</a>
+            <a class="link" href="/doctor">Doctors</a>
+            <a class="link" href="/specialize">Specializes</a>
+            <a class="link" href="/record">Records</a>
+    </div>
+    <div class="info">
+        <div class="crud">
+            <form action="/add-user" method="post">
+                <label>
+                    Add user
+                    <input type="email" placeholder="User email" name="email" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Name and surname" name="name" required>
+                </label>
+                <label>
+                    <input type="number" placeholder="Salary" name="salary" required>
+                </label>
+                <label>
+                    <input type="number" placeholder="Phone" name="phone" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Country" name="country" required>
+                </label>
+                <input type="submit" value="Add">
+                <p>{{ add }}</p>
+            </form>
+            <form action="/delete-user" method="post">
+                <label>
+                    Delete user
+                    <input type="email" placeholder="User email" name="email" required>
+                </label>
+                <input type="submit" value="Delete">
+                <p>{{delete}}</p>
+            </form>
+            <form action="/get-user" method="get">
+                <label>
+                    Find the user
+                    <input type="email" placeholder="User email" name="email" required>
+                </label>
+                <input type="submit" value="Find">
+                <p>{{get}}</p>
+            </form>
+            <form action="/update-user" method="post">
+                <label>
+                    Update user
+                    <input type="email" placeholder="User email" name="email" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Name and surname" name="name" required>
+                </label>
+                <label>
+                    <input type="number" placeholder="Salary" name="salary" required>
+                </label>
+                <label>
+                    <input type="number" placeholder="Phone" name="phone" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Country" name="country" required>
+                </label>
+                <input type="submit" value="Update">
+                <p>{{update}}</p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

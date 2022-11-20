@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country</title>
+    <link rel="stylesheet" href="templates/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="nav">
+            <a class="link" href="/disease-type">Disease types</a>
+            <a class="link" id="active" href="/country">Countries</a>
+            <a class="link" href="/disease">Diseases</a>
+            <a class="link" href="/discover">Discovers</a>
+            <a class="link" href="/users">Users</a>
+            <a class="link" href="/public-servant">Public servants</a>
+            <a class="link" href="/doctor">Doctors</a>
+            <a class="link" href="/specialize">Specializes</a>
+            <a class="link" href="/record">Records</a>
+    </div>
+    <div class="info">
+        <div class="crud">
+            <form action="/add-country" method="post">
+                <label>
+                    Add a new country
+                    <input type="text" placeholder="Country name" name="name" required>
+                </label>
+                <label>
+                    Population
+                    <input type="text" placeholder="Country population" name="population" required>
+                </label>
+                <input type="submit" value="Add">
+                <p>{{ add }}</p>
+            </form>
+            <form action="/delete-country" method="post">
+                <label>
+                    Delete the country
+                    <input type="text" placeholder="Country name" name="name" required>
+                </label>
+                <input type="submit" value="Delete">
+                <p>{{delete}}</p>
+            </form>
+            <form action="/get-country" method="get">
+                <label>
+                    Find the country's population
+                    <input type="text" placeholder="Country name" name="name" required>
+                </label>
+                <input type="submit" value="Find">
+                <p>{{get}}</p>
+            </form>
+            <form action="/update-country" method="post">
+                <label>
+                    Update the country population
+                    <input type="text" placeholder="Country name" name="name" required>
+                </label>
+                <label>
+                    <input type="number" placeholder="Population" name="population" required>
+                </label>
+                <input type="submit" value="Update">
+                <p>{{update}}</p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

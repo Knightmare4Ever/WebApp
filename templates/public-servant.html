@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Public servants</title>
+    <link rel="stylesheet" href="templates/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="nav">
+            <a class="link" href="/disease-type">Disease types</a>
+            <a class="link" href="/country">Countries</a>
+            <a class="link" href="/disease">Diseases</a>
+            <a class="link" href="/discover">Discovers</a>
+            <a class="link" href="/users">Users</a>
+            <a class="link" id="active" href="/public-servant">Public servants</a>
+            <a class="link" href="/doctor">Doctors</a>
+            <a class="link" href="/specialize">Specializes</a>
+            <a class="link" href="/record">Records</a>
+    </div>
+    <div class="info">
+        <div class="crud">
+            <form action="/add-public-servant" method="post">
+                <label>
+                    Add a public servant
+                    <input type="email" placeholder="User email" name="email" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Department" name="department" required>
+                </label>
+                <input type="submit" value="Add">
+                <p>{{ add }}</p>
+            </form>
+            <form action="/delete-public-servant" method="post">
+                <label>
+                    Delete public servant
+                    <input type="email" placeholder="User email" name="email" required>
+                </label>
+                <input type="submit" value="Delete">
+                <p>{{delete}}</p>
+            </form>
+            <form action="/get-public-servant" method="get">
+                <label>
+                    Find the public servant
+                    <input type="email" placeholder="User email" name="email" required>
+                </label>
+                <input type="submit" value="Find">
+                <p>{{get}}</p>
+            </form>
+            <form action="/update-public-servant" method="post">
+                <label>
+                    Update public servant
+                    <input type="email" placeholder="User email" name="email" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Department" name="department" required>
+                </label>
+                <input type="submit" value="Update">
+                <p>{{update}}</p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

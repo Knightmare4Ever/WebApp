@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors</title>
+    <link rel="stylesheet" href="templates/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="nav">
+            <a class="link" href="/disease-type">Disease types</a>
+            <a class="link" href="/country">Countries</a>
+            <a class="link" href="/disease">Diseases</a>
+            <a class="link" href="/discover">Discovers</a>
+            <a class="link" href="/users">Users</a>
+            <a class="link" href="/public-servant">Public servants</a>
+            <a class="link" href="/doctor">Doctors</a>
+            <a class="link" id="active" href="/specialize">Specializes</a>
+            <a class="link" href="/record">Records</a>
+    </div>
+    <div class="info">
+        <div class="crud">
+            <form action="/add-specialize" method="post">
+                <label>
+                    Add a specialize
+                    <input type="email" placeholder="Doctor email" name="email" required>
+                </label>
+                <label>
+                    <input type="number" placeholder="Disease type ID" name="id" required>
+                </label>
+                <input type="submit" value="Add">
+                <p>{{ add }}</p>
+            </form>
+            <form action="/delete-specialize" method="post">
+                <label>
+                    Delete specialize
+                    <input type="email" placeholder="Doctor email" name="email" required>
+                </label>
+                <label>
+                    <input type="number" placeholder="Disease type ID" name="id" required>
+                </label>
+                <input type="submit" value="Delete">
+                <p>{{delete}}</p>
+            </form>
+            <form action="/get-specialize" method="get">
+                <label>
+                    Find the specialize
+                    <input type="email" placeholder="Doctor email" name="email" required>
+                </label>
+                <input type="submit" value="Find">
+                <p>{{get}}</p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
